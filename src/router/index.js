@@ -1,4 +1,5 @@
-import { createRouter, createWebHistory } from "vue-router";
+/* eslint-disable */
+import {createRouter, createWebHistory} from "vue-router";
 import Home from "../views/Home.vue";
 
 const routes = [
@@ -8,13 +9,28 @@ const routes = [
     component: Home
   },
   {
-    path: "/about",
-    name: "About",
+    path: "/organization-setup",
+    name: "Organization",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
+    component: () => import("../views/Organization.vue")
+  },
+  {
+    path: "/user-setup",
+    name: "User",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import("../views/User.vue")
+  },
+  {
+    path: "/custom-user-setup",
+    name: "CustomUser",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import("../views/CustomUser.vue")
   }
 ];
 
